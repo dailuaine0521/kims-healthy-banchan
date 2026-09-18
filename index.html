@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#1f5138">
 <meta name="description" content="매일 아침 정성껏 만드는 김여사의 집밥 반찬. 원하는 반찬을 장바구니에 담아 카카오톡으로 간편하게 주문하세요.">
-<title>김여사의 반찬</title>
+<title>김여사의 겅거니</title>
 <style>
 :root{--green:#1f5138;--green2:#2d694a;--soft:#eaf2e9;--cream:#fbf7ee;--yellow:#fee500;--red:#d84932;--ink:#24241f;--muted:#777267;--line:#e7dfd2;--shadow:0 12px 34px rgba(64,47,26,.1)}
 *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:76px}body{margin:0;background:#eee8dd;color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Pretendard","Noto Sans KR","Segoe UI",sans-serif;padding-bottom:84px}button,a{font:inherit}button{cursor:pointer}img{display:block;max-width:100%}
@@ -34,13 +34,13 @@
 </head>
 <body>
 <div class="app">
-<header class="topbar"><div class="topbar-inner"><div class="brand"><div class="brand-mark">⌂</div><div><small>KIM'S BANCHAN</small><strong>김여사의 반찬</strong></div></div><button class="header-cart" type="button" onclick="openCart()">장바구니 <b id="topCount">0</b></button></div></header>
+<header class="topbar"><div class="topbar-inner"><div class="brand"><div class="brand-mark">⌂</div><div><small>KIM'S BANCHAN</small><strong>김여사의 겅거니</strong></div></div><button class="header-cart" type="button" onclick="openCart()">장바구니 <b id="topCount">0</b></button></div></header>
 <main>
 <section class="hero" id="home"><img class="hero-image" src="assets/hero.webp" alt="따뜻한 집밥 반찬 한상"><div class="hero-content"><div class="eyebrow">매일 아침 정성껏</div><h1>오늘도 갓 만든<br>집밥 같은 반찬</h1><p>좋은 재료로 정성껏 만들고, 우리 가족이 먹는다는 마음으로 준비합니다.</p><div class="hero-actions"><button class="hero-btn primary" type="button" onclick="goTo('menu')">오늘의 반찬 보기</button><button class="hero-btn ghost" type="button" onclick="openCart()">카카오톡 주문</button></div></div></section>
 <div class="promise"><div><span>🌿</span><b>좋은 재료</b><small>정직하게 골라요</small></div><div><span>🍲</span><b>당일 조리</b><small>매일 신선하게</small></div><div><span>🛍️</span><b>간편 주문</b><small>톡으로 빠르게</small></div></div>
 <section class="section"><div class="section-head"><div><div class="kicker">TODAY'S PICK</div><h2>오늘의 추천 반찬</h2></div><span class="section-hint">옆으로 넘겨보세요 →</span></div><div class="recommendations" id="recommendations"></div></section>
-<section class="section" id="menu"><div class="section-head"><div><div class="kicker">TODAY'S MENU</div><h2>김여사의 반찬</h2></div><span class="section-hint" id="menuCount"></span></div><div class="chips" id="chips"></div><div class="menu-grid" id="menuList"></div></section>
-<section class="section"><div class="story"><div class="story-mark">🌱</div><h3>동네 식탁을 정성으로 채웁니다</h3><p>매일 먹는 반찬일수록 재료와 손맛이 중요하니까요. 부담 없이 곁들이기 좋은 집밥 반찬을 그날그날 정성껏 준비합니다.</p></div></section>
+<section class="section" id="menu"><div class="section-head"><div><div class="kicker">TODAY'S MENU</div><h2>김여사의 겅거니</h2></div><span class="section-hint" id="menuCount"></span></div><div class="chips" id="chips"></div><div class="menu-grid" id="menuList"></div></section>
+<section class="section"><div class="story"><div class="story-mark">🌱</div><h3>우리집 식탁을 정성으로 채웁니다</h3><p>매일 먹는 반찬일수록 재료와 손맛이 중요하니까요. 부담 없이 곁들이기 좋은 집밥 반찬을 그날그날 정성껏 준비합니다.</p></div></section>
 <section class="section" id="order"><div class="section-head"><div><div class="kicker">HOW TO ORDER</div><h2>주문 방법</h2></div></div><div class="steps"><div class="step"><div class="step-num">1</div><div><b>원하는 반찬 담기</b><p>추천 반찬이나 전체 메뉴에서 수량을 선택하세요.</p></div></div><div class="step"><div class="step-num">2</div><div><b>주문서 복사하기</b><p>장바구니에서 주문 내용을 한 번에 복사합니다.</p></div></div><div class="step"><div class="step-num">3</div><div><b>카카오톡으로 보내기</b><p>픽업 희망 시간과 함께 주문서를 보내주세요.</p></div></div></div></section>
 <section class="section" id="store"><div class="store"><h3>매장 안내</h3><dl><dt>전화</dt><dd><a href="tel:050714371372">0507-1437-1372</a></dd><dt>주소</dt><dd>충북 청주시 상당구 남일면 효촌송암1길 30 1층</dd><dt>영업</dt><dd>월–토 08:00–20:00<br>매주 일요일 휴무</dd><dt>수령</dt><dd>매장 픽업만 가능합니다.</dd></dl></div></section>
 </main></div>
@@ -69,7 +69,7 @@ function filterCat(cat){activeCategory=cat;render()}function toggleItem(id){cart
 function syncCartUI(){const count=Object.values(cart).reduce((s,q)=>s+q,0);topCount.textContent=count;bottomCount.textContent=count;const selected=foods.filter(f=>cart[f.id]);cartItems.innerHTML=selected.length?selected.map(f=>`<div class="cart-line"><strong>${f.name}</strong><span class="cart-line-price">${won(f.price*cart[f.id])}</span><div class="cart-controls"><button onclick="changeQty('${f.id}',-1)">−</button><b>${cart[f.id]}</b><button onclick="changeQty('${f.id}',1)">+</button><button class="cart-remove" onclick="removeItem('${f.id}')">삭제</button></div></div>`).join(''):'<div class="empty">🛒<br><br>아직 담긴 반찬이 없습니다.</div>';cartTotal.textContent=won(selected.reduce((s,f)=>s+f.price*cart[f.id],0))}
 function openCart(){cartPanel.classList.add('open');cartBackdrop.classList.add('open');cartPanel.setAttribute('aria-hidden','false');document.body.style.overflow='hidden'}function closeCart(){cartPanel.classList.remove('open');cartBackdrop.classList.remove('open');cartPanel.setAttribute('aria-hidden','true');document.body.style.overflow=''}function goTo(id){closeCart();document.getElementById(id).scrollIntoView()}
 function showToast(msg){toast.textContent=msg;toast.classList.add('show');clearTimeout(showToast.timer);showToast.timer=setTimeout(()=>toast.classList.remove('show'),2100)}
-async function orderKakao(){const selected=foods.filter(f=>cart[f.id]);if(!selected.length){showToast('장바구니에 반찬을 먼저 담아주세요.');return}const total=selected.reduce((s,f)=>s+f.price*cart[f.id],0),text=['[김여사의 반찬 주문서]',...selected.map(f=>`- ${f.name} × ${cart[f.id]} : ${won(f.price*cart[f.id])}`),`합계: ${won(total)}`,'','픽업 희망시간: '].join('\n');try{await navigator.clipboard.writeText(text);showToast('주문서를 복사했어요. 카카오톡에 붙여넣어 주세요.')}catch{showToast('복사가 안 되면 장바구니 내용을 직접 보내주세요.')}if(KAKAO_OPEN_CHAT_URL)setTimeout(()=>location.href=KAKAO_OPEN_CHAT_URL,300)}
+async function orderKakao(){const selected=foods.filter(f=>cart[f.id]);if(!selected.length){showToast('장바구니에 반찬을 먼저 담아주세요.');return}const total=selected.reduce((s,f)=>s+f.price*cart[f.id],0),text=['[김여사의 겅거니 주문서]',...selected.map(f=>`- ${f.name} × ${cart[f.id]} : ${won(f.price*cart[f.id])}`),`합계: ${won(total)}`,'','픽업 희망시간: '].join('\n');try{await navigator.clipboard.writeText(text);showToast('주문서를 복사했어요. 카카오톡에 붙여넣어 주세요.')}catch{showToast('복사가 안 되면 장바구니 내용을 직접 보내주세요.')}if(KAKAO_OPEN_CHAT_URL)setTimeout(()=>location.href=KAKAO_OPEN_CHAT_URL,300)}
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeCart()});render();
 </script>
 </body>
