@@ -1,0 +1,83 @@
+{
+  "version": 1,
+  "updatedAt": "2026-09-19T00:00:00Z",
+  "foods": [
+    {
+      "id": "pork",
+      "name": "제육볶음",
+      "price": 7000,
+      "cat": "메인반찬",
+      "desc": "매콤달콤한 양념으로 볶은 든든한 인기 반찬",
+      "badge": "BEST",
+      "image": "assets/pork.webp",
+      "pos": "center",
+      "soldOut": false
+    },
+    {
+      "id": "egg",
+      "name": "계란말이",
+      "price": 5000,
+      "cat": "메인반찬",
+      "desc": "부드럽고 도톰하게 말아낸 집밥 대표 반찬",
+      "badge": "추천",
+      "image": "assets/egg.webp",
+      "pos": "center",
+      "soldOut": false
+    },
+    {
+      "id": "spinach",
+      "name": "시금치무침",
+      "price": 4000,
+      "cat": "밑반찬",
+      "desc": "참깨 향을 더해 담백하게 무친 나물 반찬",
+      "badge": "신선",
+      "image": "assets/spinach.webp",
+      "pos": "center",
+      "soldOut": false
+    },
+    {
+      "id": "anchovy",
+      "name": "멸치볶음",
+      "price": 4500,
+      "cat": "밑반찬",
+      "desc": "고소하고 달큰하게 볶아낸 밥도둑 밑반찬",
+      "badge": "인기",
+      "image": "assets/anchovy.webp",
+      "pos": "center",
+      "soldOut": false
+    },
+    {
+      "id": "kimchi",
+      "name": "배추김치",
+      "price": 5000,
+      "cat": "김치",
+      "desc": "아삭하고 시원하게 익힌 기본 배추김치",
+      "badge": "기본",
+      "image": "assets/kimchi.webp",
+      "pos": "center",
+      "soldOut": false
+    },
+    {
+      "id": "kimchistew",
+      "name": "돼지고기 김치찌개",
+      "price": 7000,
+      "cat": "국·찌개",
+      "desc": "돼지고기와 잘 익은 김치로 끓인 칼칼한 찌개",
+      "badge": "오늘 추천",
+      "image": "assets/kimchi-stew.webp",
+      "pos": "center",
+      "soldOut": false
+    },
+    {
+      "id": "beefsoup",
+      "name": "소고기뭇국",
+      "price": 6500,
+      "cat": "국·찌개",
+      "desc": "맑고 시원하게 끓여낸 든든한 소고기뭇국",
+      "badge": "BEST",
+      "image": "assets/beef-soup.webp",
+      "pos": "center",
+      "soldOut": false
+    }
+  ]
+}
