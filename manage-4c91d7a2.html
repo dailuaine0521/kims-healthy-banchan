@@ -9,16 +9,16 @@
   <title>김여사의 겅거니 · 관리자</title>
   <style>
     :root{--green:#1f5138;--green2:#2d694a;--cream:#fbf7ee;--ink:#24241f;--muted:#777267;--line:#e4ddd2;--red:#d84932;--yellow:#fee500}
-    *{box-sizing:border-box}body{margin:0;min-height:100vh;background:#eee8dd;color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Pretendard","Noto Sans KR","Segoe UI",sans-serif}button,input{font:inherit}button{cursor:pointer}.hidden{display:none!important}
+    *{box-sizing:border-box}body{margin:0;min-height:100vh;background:#eee8dd;color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Pretendard","Noto Sans KR","Segoe UI",sans-serif}button,input,select,textarea{font:inherit}button{cursor:pointer}.hidden{display:none!important}
     .shell{width:min(100%,760px);min-height:100vh;margin:auto;background:#fffdf8}.top{position:sticky;top:0;z-index:10;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:15px 18px;background:rgba(255,253,248,.95);border-bottom:1px solid var(--line);backdrop-filter:blur(12px)}.brand small{display:block;color:#8a7457;font-size:9px;font-weight:900;letter-spacing:.16em}.brand strong{display:block;color:var(--green);font-size:19px}.logout{border:0;border-radius:10px;background:#efe9df;color:#6b5f50;padding:9px 11px;font-size:12px;font-weight:850}
     .gate{min-height:100vh;display:grid;place-items:center;padding:24px}.gate-card{width:min(100%,410px);padding:25px;border:1px solid var(--line);border-radius:24px;background:#fff;box-shadow:0 18px 50px rgba(54,42,29,.12)}.mark{width:52px;height:52px;display:grid;place-items:center;border-radius:16px;background:var(--green);color:#fff;font-size:25px}.gate h1{margin:16px 0 8px;font-size:25px}.gate p{margin:0 0 18px;color:var(--muted);font-size:13px;line-height:1.65}
-    .field{margin-top:11px}.field label{display:block;margin:0 0 6px;color:#615b52;font-size:11px;font-weight:850}.field input{width:100%;height:48px;border:1px solid #d9d0c3;border-radius:12px;background:#fff;padding:0 13px;color:var(--ink)}.field input:focus{outline:2px solid rgba(31,81,56,.2);border-color:var(--green)}
+    .field{margin-top:11px}.field label{display:block;margin:0 0 6px;color:#615b52;font-size:11px;font-weight:850}.field input,.field select,.field textarea{width:100%;border:1px solid #d9d0c3;border-radius:12px;background:#fff;padding:0 13px;color:var(--ink)}.field input,.field select{height:48px}.field textarea{min-height:78px;padding-top:12px;resize:vertical;line-height:1.5}.field input:focus,.field select:focus,.field textarea:focus{outline:2px solid rgba(31,81,56,.2);border-color:var(--green)}
     .primary{width:100%;min-height:49px;margin-top:13px;border:0;border-radius:12px;background:var(--green);color:#fff;font-weight:900}.primary:disabled{opacity:.55;cursor:wait}.hint{margin-top:10px;color:var(--muted);font-size:10px;line-height:1.55}.error{min-height:19px;margin-top:9px;color:var(--red);font-size:11px;font-weight:750}.token-link{color:var(--green);font-weight:850}
     .content{padding:22px 17px 110px}.welcome{padding:19px;border-radius:20px;background:linear-gradient(135deg,#173f2b,#2d694a);color:#fff}.welcome h1{margin:0 0 7px;font-size:24px}.welcome p{margin:0;color:rgba(255,255,255,.75);font-size:12px;line-height:1.6}
-    .toolbar{position:sticky;top:70px;z-index:8;display:flex;align-items:center;justify-content:space-between;gap:10px;margin:16px 0;padding:11px;border:1px solid var(--line);border-radius:16px;background:rgba(255,253,248,.95);box-shadow:0 8px 22px rgba(54,42,29,.07);backdrop-filter:blur(12px)}.status{min-width:0;color:var(--muted);font-size:11px;line-height:1.4}.save{flex:0 0 auto;border:0;border-radius:11px;background:var(--yellow);color:#191919;padding:11px 15px;font-size:12px;font-weight:950}.save:disabled{background:#ddd7cc;color:#8a8379;cursor:not-allowed}
+    .add-panel{margin:16px 0;padding:17px;border:1px solid var(--line);border-radius:19px;background:#fff;box-shadow:0 5px 16px rgba(58,44,28,.05)}.add-panel h2{margin:0 0 4px;font-size:19px}.add-panel>p{margin:0 0 10px;color:var(--muted);font-size:11px}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 10px}.field.full{grid-column:1/-1}.add-panel .primary{margin-top:15px}.toolbar{position:sticky;top:70px;z-index:8;display:flex;align-items:center;justify-content:space-between;gap:10px;margin:16px 0;padding:11px;border:1px solid var(--line);border-radius:16px;background:rgba(255,253,248,.95);box-shadow:0 8px 22px rgba(54,42,29,.07);backdrop-filter:blur(12px)}.status{min-width:0;color:var(--muted);font-size:11px;line-height:1.4}.save{flex:0 0 auto;border:0;border-radius:11px;background:var(--yellow);color:#191919;padding:11px 15px;font-size:12px;font-weight:950}.save:disabled{background:#ddd7cc;color:#8a8379;cursor:not-allowed}
     .menu{display:grid;gap:12px}.card{display:grid;grid-template-columns:108px 1fr;gap:13px;padding:12px;border:1px solid var(--line);border-radius:18px;background:#fff;box-shadow:0 5px 16px rgba(58,44,28,.05)}.photo{position:relative;width:108px;height:108px;border-radius:14px;overflow:hidden;background:#eee}.photo img{width:100%;height:100%;object-fit:cover}.photo label{position:absolute;inset:auto 7px 7px;display:block;padding:7px 5px;border-radius:9px;background:rgba(20,24,21,.82);color:#fff;text-align:center;font-size:10px;font-weight:850;cursor:pointer}.photo input{display:none}.card h2{margin:3px 0 4px;font-size:17px}.meta{color:var(--muted);font-size:11px}.state-row{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:15px;padding-top:12px;border-top:1px dashed #e5ddd2}.state-label{font-size:12px;font-weight:850}.switch{position:relative;width:50px;height:29px}.switch input{position:absolute;opacity:0}.slider{position:absolute;inset:0;border-radius:99px;background:#c9c3ba;transition:.2s}.slider:before{content:"";position:absolute;left:3px;top:3px;width:23px;height:23px;border-radius:50%;background:#fff;box-shadow:0 2px 6px rgba(0,0,0,.18);transition:.2s}.switch input:checked+.slider{background:var(--red)}.switch input:checked+.slider:before{transform:translateX(21px)}.sold-text{color:var(--red)}
     .notice{margin:15px 0;padding:13px;border-radius:14px;background:#f6f0e6;color:#6d655a;font-size:10px;line-height:1.65}.toast{position:fixed;left:50%;bottom:24px;z-index:30;max-width:calc(100% - 32px);transform:translate(-50%,16px);opacity:0;pointer-events:none;border-radius:999px;background:#20241f;color:#fff;padding:11px 15px;font-size:12px;transition:.2s;white-space:nowrap}.toast.show{opacity:1;transform:translate(-50%,0)}
-    @media(max-width:430px){.card{grid-template-columns:92px 1fr}.photo{width:92px;height:100px}.toolbar{top:66px}}
+    @media(max-width:430px){.card{grid-template-columns:92px 1fr}.photo{width:92px;height:100px}.toolbar{top:66px}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}}
   </style>
 </head>
 <body>
@@ -32,7 +32,7 @@
 
   <div class="shell hidden" id="adminApp">
     <header class="top"><div class="brand"><small>KIM'S BANCHAN ADMIN</small><strong>김여사의 겅거니</strong></div><button class="logout" id="logoutBtn">로그아웃</button></header>
-    <main class="content"><section class="welcome"><h1>메뉴 관리</h1><p>사진을 바꾸거나 품절 상태를 선택한 뒤 ‘변경사항 저장’을 누르세요.</p></section><div class="toolbar"><div class="status" id="saveStatus">메뉴를 불러왔습니다.</div><button class="save" id="saveBtn" disabled>변경사항 저장</button></div><div class="notice">사진은 자동으로 웹용 크기로 줄여 저장됩니다. 저장 후 GitHub Pages에 반영되기까지 보통 1~2분 정도 걸릴 수 있습니다.</div><section class="menu" id="menuEditor"></section></main>
+    <main class="content"><section class="welcome"><h1>메뉴 관리</h1><p>새 메뉴를 추가하거나 사진과 품절 상태를 바꾼 뒤 ‘변경사항 저장’을 누르세요.</p></section><form class="add-panel" id="addMenuForm"><h2>새 메뉴 추가</h2><p>메뉴 정보를 입력하고 사진을 선택하세요.</p><div class="form-grid"><div class="field"><label for="newName">메뉴명</label><input id="newName" maxlength="30" placeholder="예: 오이무침" required></div><div class="field"><label for="newPrice">가격</label><input id="newPrice" type="number" min="0" step="100" inputmode="numeric" placeholder="예: 4000" required></div><div class="field"><label for="newCategory">분류</label><select id="newCategory"><option>메인반찬</option><option>밑반찬</option><option>김치</option><option>국·찌개</option></select></div><div class="field"><label for="newImage">음식 사진</label><input id="newImage" type="file" accept="image/jpeg,image/png,image/webp" required></div><div class="field full"><label for="newDesc">메뉴 설명</label><textarea id="newDesc" maxlength="80" placeholder="반찬의 맛과 특징을 간단히 적어주세요." required></textarea></div></div><button class="primary" type="submit">메뉴 목록에 추가</button></form><div class="toolbar"><div class="status" id="saveStatus">메뉴를 불러왔습니다.</div><button class="save" id="saveBtn" disabled>변경사항 저장</button></div><div class="notice">사진은 자동으로 웹용 크기로 줄여 저장됩니다. 새 메뉴도 ‘변경사항 저장’을 눌러야 홈페이지에 반영되며, 보통 1~2분 정도 걸릴 수 있습니다.</div><section class="menu" id="menuEditor"></section></main>
   </div>
   <div class="toast" id="toast" role="status"></div>
 
@@ -93,6 +93,17 @@
     }
     function markDirty(message){dirty=true;$('saveBtn').disabled=false;$('saveStatus').textContent=message}
 
+    function addMenu(event){
+      event.preventDefault();
+      const name=$('newName').value.trim(),price=Number($('newPrice').value),cat=$('newCategory').value,desc=$('newDesc').value.trim(),file=$('newImage').files[0];
+      if(!name||!Number.isFinite(price)||price<0||!desc||!file){toast('메뉴 정보를 모두 입력하세요.');return}
+      if(!file.type.startsWith('image/')){toast('이미지 파일만 선택할 수 있습니다.');return}
+      if(file.size>12*1024*1024){toast('12MB 이하 사진을 선택하세요.');return}
+      const random=crypto.getRandomValues(new Uint32Array(1))[0].toString(36),id=`menu-${Date.now().toString(36)}-${random}`;
+      menuData.foods.push({id,name,price:Math.round(price),cat,desc,badge:'신메뉴',image:URL.createObjectURL(file),pos:'center',soldOut:false});
+      pendingImages.set(id,file);renderEditor();event.currentTarget.reset();markDirty(`${name} 메뉴가 추가되었습니다. 저장 버튼을 눌러주세요.`);$('menuEditor').lastElementChild?.scrollIntoView({behavior:'smooth',block:'center'});
+    }
+
     async function optimizeImage(file){
       const bitmap=await createImageBitmap(file),max=1200,scale=Math.min(1,max/Math.max(bitmap.width,bitmap.height)),canvas=document.createElement('canvas');
       canvas.width=Math.round(bitmap.width*scale);canvas.height=Math.round(bitmap.height*scale);
@@ -109,12 +120,12 @@
       try{
         for(const [id,file] of pendingImages){const food=menuData.foods.find(f=>f.id===id),path=`assets/admin/${id}.webp`,bytes=await optimizeImage(file),sha=await existingSha(path);await putFile(path,bytesBase64(bytes),`Update ${food.name} photo`,sha);food.image=`${path}?v=${Date.now()}`;food.pos='center'}
         menuData.updatedAt=new Date().toISOString();
-        const saved=await putFile(MENU_PATH,encodeBase64(JSON.stringify(menuData,null,2)+'\n'),'Update menu availability and photos',menuSha);
+        const saved=await putFile(MENU_PATH,encodeBase64(JSON.stringify(menuData,null,2)+'\n'),'Update menu items, availability, and photos',menuSha);
         menuSha=saved.content.sha;pendingImages.clear();dirty=false;$('saveStatus').textContent='저장 완료 · 홈페이지 반영을 기다리는 중';toast('변경사항을 저장했습니다.');renderEditor()
       }catch(e){$('saveStatus').textContent='저장 실패';toast(e.status===409?'다른 변경과 충돌했습니다. 새로고침 후 다시 시도하세요.':e.message);button.disabled=false}
     }
     function logout(){token='';menuData=null;menuSha='';dirty=false;pendingImages.clear();$('githubToken').value='';show('passwordGate')}
-    $('unlockBtn').addEventListener('click',unlock);$('adminPassword').addEventListener('keydown',e=>{if(e.key==='Enter')unlock()});$('connectBtn').addEventListener('click',connect);$('githubToken').addEventListener('keydown',e=>{if(e.key==='Enter')connect()});$('saveBtn').addEventListener('click',saveChanges);$('logoutBtn').addEventListener('click',logout);
+    $('unlockBtn').addEventListener('click',unlock);$('adminPassword').addEventListener('keydown',e=>{if(e.key==='Enter')unlock()});$('connectBtn').addEventListener('click',connect);$('githubToken').addEventListener('keydown',e=>{if(e.key==='Enter')connect()});$('addMenuForm').addEventListener('submit',addMenu);$('saveBtn').addEventListener('click',saveChanges);$('logoutBtn').addEventListener('click',logout);
     const initial=lockState();if(initial.until>Date.now())$('passwordError').textContent=lockMessage(initial);
   </script>
 </body>
